@@ -3,6 +3,7 @@ import './Recipe.sass'
 import PropTypes from 'prop-types'
 
 const Recipe = ({ label, calories, image }) => {
+
   return (
     <article className="each-recipe">
       <img src={image} alt={label} />
@@ -10,7 +11,7 @@ const Recipe = ({ label, calories, image }) => {
         <h4>{label}</h4>
       </div>
       <div className="recipe-info">
-        <p>Calories: {calories}</p>
+        <p>Calories: {parseInt(calories)}</p>
       </div>
     </article>
   );

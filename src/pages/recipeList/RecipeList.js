@@ -15,15 +15,18 @@ export default function RecipeList() {
         )
     } else {
         return (
-            <div className="recipes">
-                {recipeState.sortedRecipes.map(recipe => (
-                    <Recipe
-                        key={Math.random(Date.now())}
-                        label={recipe.recipe.label}
-                        calories={recipe.recipe.calories}
-                        image={recipe.recipe.image}
-                    />
-                ))}
+            <div>
+                <div className="recipes">
+                    {recipeState.sortedRecipes.map(recipe => (
+                        <Recipe
+                            key={Math.random(Date.now())}
+                            label={recipe.recipe.label}
+                            calories={recipe.recipe.calories}
+                            image={recipe.recipe.image}
+                            ingredients={recipe.recipe.ingredients}
+                        />
+                    ))}
+                </div>
             </div>
         )
     }

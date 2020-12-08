@@ -27,7 +27,7 @@ export default function Pagination() {
     function fetchPageNumbers() {
         const totalPages = parseInt(recipeState.maxPages)
         const currentPage = recipeState.pageShown
-        const pageNeighbor = 2
+        const pageNeighbor = 1
         
         // Total Numbers: Total page to show on control
         // Blocks: + 2 to cover for the left and right control
@@ -76,7 +76,6 @@ export default function Pagination() {
 
     const handleMoveLeft = evt => {
         evt.preventDefault()
-        console.log(recipeState.pageShown)
         handlePaginationData(recipeState.pageShown - 1)
     }
 
@@ -96,7 +95,7 @@ export default function Pagination() {
                         if(page === LEFT_PAGE) return (
                             <li key={index} className="page-item">
                                 <a className="page-link" href="#" onClick={handleMoveLeft}>
-                                    Previous
+                                    Prev
                                 </a>
                             </li>
                         )

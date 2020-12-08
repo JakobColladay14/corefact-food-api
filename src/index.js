@@ -5,18 +5,19 @@ import Search from './components/search/Search'
 import RecipeList from "./pages/recipeList/RecipeList";
 import { FoodProvider } from './context/Context'
 import Pagination from "./components/pagination/Pagination";
+import { QueryProvider } from "./context/QueryContext";
 
 const App = () => {
   return (
-    <FoodProvider>
-      <div className="App">
-        <Search />
-        <Pagination />
-        <hr />
-        <RecipeList />
-      </div>
-    </FoodProvider>
-  );
+    <QueryProvider>
+      <FoodProvider>
+          <Search />
+          <Pagination />
+          <hr />
+          <RecipeList />
+      </FoodProvider>
+    </QueryProvider>
+    );
 };
 
 const rootElement = document.getElementById("root");

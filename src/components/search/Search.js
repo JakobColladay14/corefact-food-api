@@ -1,9 +1,11 @@
 import React from 'react'
 import { UseFoodContext } from '../../context/Context'
+import { UseQueryContext } from '../../context/QueryContext'
 import './Search.sass'
 
 export default function Search() {
-    const { setSearch, search, handleSearch } = UseFoodContext()
+    const { setSearch, search } = UseFoodContext()
+    const { handleSearch } = UseQueryContext()
 
     return (
         <form onSubmit={handleSearch} className="search-ctr">
