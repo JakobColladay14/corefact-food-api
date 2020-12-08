@@ -1,0 +1,55 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-flow: column wrap;
+}
+
+$border: 1px solid lightslategray;
+$border-hover: 2px solid lightslategray;
+
+.search-item{
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+  input{
+    width: 50%;
+    height: 40px;
+    border: $border;
+    outline: none;
+    font-size: 140%;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 10px 20px;
+  }
+  input:hover{
+    border: $border-hover;
+  }
+  button{
+    flex: 0.3;
+    border: $border;
+    color: white;
+    background-color: royalblue;
+  }
+}
+
+.recipes{
+  height: auto;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+.each-recipe{
+  margin: 30px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around; 
+}
+
+@media screen and (min-width: 800px) {
+  .recipes{
+    flex-direction: row;
+  }
+}
