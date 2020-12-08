@@ -94,25 +94,25 @@ export default function Pagination() {
                     { pages.map((page, index) => {
                         if(page === LEFT_PAGE) return (
                             <li key={index} className="page-item">
-                                <a className="page-link" href="#" onClick={handleMoveLeft}>
+                                <button className="page-link" href="#" onClick={handleMoveLeft}>
                                     Prev
-                                </a>
+                                </button>
                             </li>
                         )
 
                         if(page === RIGHT_PAGE) return (
                             <li key={index} className="page-item">
-                                <a className="page-link" href="#" onClick={handleMoveRight}>
+                                <button className="page-link" href="#" onClick={handleMoveRight}>
                                     Next
-                                </a>
+                                </button>
                             </li>
                         )
 
                         return (
                             <li key={index} className={`page-item ${recipeState.pageShown === page ? 'active' : ''}`}>
-                                <a className="page-link" href="#" onClick={handleClick(page)}>
+                                <button className={`page-link ${recipeState.pageShown === page ? 'active' : ''}`} href="#" onClick={handleClick(page)}>
                                     {page}
-                                </a>
+                                </button>
                             </li>
                         )  
                     })
